@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mubarak Restaurant</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Header */
+      .topnav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #e9e9e9;
+        padding: 10px 20px;
+      }
+      .topnav h1 {
+        font-size: 26px;
+        margin: 0;
+      }
+      .search-container input[type="text"] {
+        padding: 6px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+      }
+      .search-container button {
+        padding: 6px 10px;
+        background: #ccc;
+        border: none;
+        cursor: pointer;
+      }
+
+      /* Banner */
+      .banner img {
+        width: 100%;
+        height: auto;
+        opacity: 0.9;
+      }
+
+      /* Welcome Section */
+      .welcome {
+        text-align: center;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      .welcome h2 {
+        margin-top: 0;
+        background-color: (79, 73, 73);
+      }
+
+      /* Menu Section */
+      .menu-gallery {
+        padding: 20px;
+      }
+      .menu-gallery h2,
+      .menu-gallery h3 {
+        text-align: center;
+      }
+
+      .gallery-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+      .gallery-item {
+        background-size: cover;
+        background-position: center;
+        width: 22%;
+        height: 200px;
+        position: relative;
+        border: 1px solid #ccc;
+        transition: transform 0.3s;
+      }
+      .gallery-item:hover {
+        transform: scale(1.05);
+      }
+      .caption {
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+      }
+
+      /* Info Sections */
+      .info-sections {
+        padding: 20px;
+      }
+      .info-block {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        gap: 20px;
+        background-color: rgb(92, 90, 90);
+      }
+      .info-block img {
+        width: 50%;
+        height: 50%;
+      }
+      .info-block p {
+        width: 50%;
+        font-size: 20px;
+        color: whitesmoke;
+      }
+      .info-block.reverse {
+        flex-direction: row-reverse;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #222;
+        color: white;
+        text-align: center;
+        padding: 15px;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .gallery-item {
+          width: 45%;
+        }
+        .info-block,
+        .info-block.reverse {
+          flex-direction: column;
+        }
+        .info-block img,
+        .info-block p {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="topnav">
+      <h1>Mubarak Restaurant</h1>
+      <div class="search-container">
+        <form action="#">
+          <input type="text" placeholder="Search..." name="search" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+      <img src="logo.jpg" alt="Restaurant Banner" />
+    </section>
+
+    <!-- Welcome -->
+    <section class="welcome">
+      <h2>Welcome to Mubarak Restaurant</h2>
+      <p>
+        Experience the taste of tradition. We serve freshly made South Indian
+        and Arabian dishes with love. Explore our menu for breakfast, lunch, and
+        dinner specialties.
+      </p>
+      <h4>Locations: Marthandam - Nagercoil - Trivandrum</h4>
+    </section>
+
+    <!-- Menu Gallery -->
+    <section class="menu-gallery">
+      <h2>Our Menu</h2>
+
+      <h3>Breakfast</h3>
+      <div class="gallery-row">
+        <div class="gallery-item" style="background-image: url('dosa.webp')">
+          <div class="caption">Dosa</div>
+        </div>
+        <div class="gallery-item" style="background-image: url('parotta.webp')">
+          <div class="caption">Parotta</div>
+        </div>
+        <div class="gallery-item" style="background-image: url('idli.jpg')">
+          <div class="caption">Idli</div>
+        </div>
+        <div
+          class="gallery-item"
+          style="background-image: url('idiyappam.webp')"
+        >
+          <div class="caption">Idiyappam</div>
+        </div>
+      </div>
+
+      <h3>Lunch</h3>
+      <div class="gallery-row">
+        <div class="gallery-item" style="background-image: url('rice.jpg')">
+          <div class="caption">Veg Meals</div>
+        </div>
+        <div class="gallery-item" style="background-image: url('cb.jpg')">
+          <div class="caption">Chicken Biriyani</div>
+        </div>
+        <div class="gallery-item" style="background-image: url('MB.jpg')">
+          <div class="caption">Mutton Biriyani</div>
+        </div>
+        <div class="gallery-item" style="background-image: url('BB.jpg')">
+          <div class="caption">Beef Biriyani</div>
+        </div>
+      </div>
+
+      <h3>Dinner</h3>
+      <div class="gallery-row">
+        <div class="gallery-item" style="background-image: url('chapati.jpg')">
+          <div class="caption">Chapati</div>
+        </div>
+        <div class="gallery-item" style="background-image: url('alfam.webp')">
+          <div class="caption">Alfaham</div>
+        </div>
+        <div class="gallery-item" style="background-image: url('grill.jpg')">
+          <div class="caption">Shawai</div>
+        </div>
+        <div
+          class="gallery-item"
+          style="background-image: url('shawarma.webp')"
+        >
+          <div class="caption">Shawarma</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-sections">
+      <div class="info-block">
+        <img src="kitchen.jpg" alt="Kitchen" />
+        <p>
+          Our chefs are trained professionals who prepare meals with top-quality
+          ingredients ensuring hygiene and taste.
+        </p>
+      </div>
+      <div class="info-block reverse">
+        <p>
+          We also offer catering services for events and gatherings. Get in
+          touch to make your occasions deliciously memorable!
+        </p>
+        <img src="catering.jpeg" alt="Catering" />
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Mubarak Restaurant. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
